@@ -14,6 +14,16 @@ npm install
 npm start
 ```
 
+to locall host po follow this:
+
+$env:Host = '0.0.0.0'
+npm start
+ipconfig
+192.168.1.xx
+
+goto http://192.168.1.xx:3000
+
+
 Open [http://localhost:3000](http://localhost:3000). Scores are stored in `data/arcade.sqlite`. Set `PORT`, `HOST`, or `DB_PATH` to override the defaults. The server binds to `127.0.0.1` by default.
 
 ## Admin panel
