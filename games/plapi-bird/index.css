@@ -1,0 +1,139 @@
+body {
+  background-color: #0099cc;
+  color: #fff;
+
+  /* Allow mouse dragging. */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* disable touch panning/zooming */
+  -ms-touch-action: none;
+  touch-action: none;
+
+  /* Allow canvas to hit the edges of the browser viewport. */
+  margin: 0;
+}
+
+.arcade-score-panel {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  color: #241b12;
+  background: rgba(0, 0, 0, .62);
+  font-family: Arial, sans-serif;
+}
+
+.arcade-score-panel[hidden] {
+  display: none;
+}
+
+#arcade-score-form {
+  display: grid;
+  width: min(340px, 100%);
+  gap: 9px;
+  padding: 20px;
+  border: 3px solid #423525;
+  background: #f2e4bf;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .45);
+}
+
+.arcade-score-kicker,
+#arcade-score-status {
+  color: #66543d;
+  font: 10px monospace;
+  letter-spacing: .08em;
+}
+
+#arcade-score-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+#arcade-score-form p {
+  margin: 0 0 5px;
+}
+
+#arcade-score-form label {
+  font-size: 12px;
+}
+
+#arcade-player-name {
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #98876a;
+  color: #241b12;
+  background: #fffaf0;
+  font: 12px Arial, sans-serif;
+}
+
+.arcade-score-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.arcade-score-actions button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #403426;
+  color: #fff8e8;
+  background: #403426;
+  font: 10px monospace;
+  cursor: pointer;
+}
+
+.arcade-score-actions button[type="submit"] {
+  flex: 1;
+  border-color: #bd5032;
+  background: #bd5032;
+}
+
+.arcade-score-actions button:disabled {
+  cursor: default;
+  opacity: .65;
+}
+
+#screen canvas {
+  margin: auto;
+  /* Hide the gap for font descenders. */
+  display: block;
+
+  /* disable scaling interpolation */
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+#share {
+  margin: 10px auto;
+  text-align: center;
+}
+
+#share .fb-share-button iframe {
+  margin-top: -4px;
+}
+
+@font-face {
+  font-family: 'gamefont';
+  src: url('data/css/gamefont.eot');
+  src: url('data/css/gamefont.eot?#iefix') format('embedded-opentype'),
+     url('data/css/gamefont.woff') format('woff'),
+     url('data/css/gamefont.ttf') format('truetype'),
+     url('data/css/gamefont.svg#gamefont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.google {
+  position: absolute;
+  left:23%;
+}

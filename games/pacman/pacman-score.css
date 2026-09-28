@@ -1,0 +1,100 @@
+#arcade-score-panel {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  background: rgba(0, 0, 0, .76);
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+#arcade-score-panel[hidden],
+#arcade-score-form[hidden],
+#arcade-score-invalid[hidden] {
+  display: none;
+}
+
+.arcade-score-card {
+  display: grid;
+  width: min(360px, calc(100vw - 28px));
+  gap: 11px;
+  padding: 22px;
+  border: 1px solid #713b37;
+  color: #fff2f0;
+  background: #241010;
+  box-shadow: 0 12px 38px rgba(0, 0, 0, .55);
+}
+
+.arcade-score-kicker,
+#arcade-score-status {
+  color: #d99a94;
+  font: 10px monospace;
+  letter-spacing: .08em;
+}
+
+#arcade-score-title {
+  margin: 0;
+  font: 600 24px Arial, sans-serif;
+  text-transform: none;
+}
+
+.arcade-score-value {
+  margin: 0;
+  color: #e6cfcc;
+  font: 12px monospace;
+}
+
+.arcade-score-value strong {
+  color: #ff655e;
+}
+
+#arcade-score-invalid {
+  margin: 0;
+  color: #ffaaa3;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+#arcade-score-form {
+  display: grid;
+  gap: 8px;
+}
+
+#arcade-score-form label {
+  color: #c6aaa6;
+  font: 10px monospace;
+}
+
+#arcade-player-name {
+  min-height: 39px;
+  padding: 0 11px;
+  border: 1px solid #563331;
+  border-radius: 2px;
+  color: #fff2f0;
+  background: #190909;
+  font: 12px Arial, sans-serif;
+}
+
+#arcade-score-panel button {
+  min-height: 37px;
+  padding: 0 12px;
+  border: 1px solid #68403d;
+  border-radius: 2px;
+  color: #f9e9e7;
+  background: #321818;
+  font: 10px monospace;
+  cursor: pointer;
+}
+
+#arcade-score-form button {
+  border-color: #bd403a;
+  color: #fff;
+  background: #bd403a;
+}
+
+#arcade-score-panel button:disabled {
+  cursor: default;
+  opacity: .6;
+}

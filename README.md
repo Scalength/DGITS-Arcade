@@ -30,6 +30,10 @@ Open [http://localhost:3000](http://localhost:3000). Scores are stored in `data/
 
 Open [http://admin.localhost:3000](http://admin.localhost:3000) or [http://localhost:3000/admin](http://localhost:3000/admin) to review and remove leaderboard entries. Admin access is limited to loopback requests, and delete requests must be same-origin.
 
+## Client sessions
+
+LAN devices must be registered by IP in the admin panel before they can load games or submit scores. Enter the device IP and the number of minutes to grant; additional grants extend its current expiry. New grants default to 60 minutes. The arcade shows the remaining time and unloads the game when the session expires. Loopback access on the host is exempt.
+
 ## Score API
 
 - `GET /api/games` returns the `games.json` registry.

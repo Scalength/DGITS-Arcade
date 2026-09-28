@@ -1,6 +1,6 @@
 /* global canvas ctx animation:writable gameLoop label loop paintCircle isIntersectingRectangleWithCircle generateRandomNumber generateRandomCharCode paintParticles createParticles processParticles */
 let score = 0;
-let lives = 3;
+let lives = 1;
 let caseSensitive = true;
 let gameOver = false;
 let finalScore = 0;
@@ -12,6 +12,7 @@ const scoreForm = document.getElementById('score-form');
 const playerNameInput = document.getElementById('player-name');
 const gameStatus = document.getElementById('game-status');
 const submitButton = scoreForm.querySelector('button[type="submit"]');
+const playAgainButton = document.getElementById('play-again');
 
 const center = {
   x: canvas.width / 2,
@@ -114,6 +115,22 @@ scoreForm.addEventListener('submit', (event) => {
   } catch (error) {
     gameStatus.textContent = error.message.toUpperCase();
   }
+});
+
+playAgainButton.addEventListener('click', () => {
+  score = 0;
+  lives = 1;
+  caseSensitive = true;
+  gameOver = false;
+  finalScore = 0;
+  scoreSubmitted = false;
+  letters = [];
+  particles.length = 0;
+  playerNameInput.value = '';
+  submitButton.disabled = false;
+  document.getElementById('change-case-text').textContent = '';
+  gameStatus.textContent = 'READY WHEN YOU ARE.';
+  gameOverPanel.hidden = true;
 });
 
 window.changeCase = function () {

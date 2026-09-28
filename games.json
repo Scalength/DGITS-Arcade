@@ -1,16 +1,31 @@
 [
   {
     "id": "quick-tap",
-    "title": "Quick Tap",
+    "title": "DGIT_TAP",
     "genre": "CLICKER",
     "description": "Stack points, one hit at a time.",
     "accent": "#c9ff61"
   },
   {
     "id": "typer",
-    "title": "Typer",
+    "title": "DGIT_TYPE",
     "genre": "WORD DEFENSE",
     "description": "Type fast. Keep the center alive.",
     "accent": "#75d6ff"
+  },
+  {
+    "id": "plapi-bird",
+    "title": "DGIT_FLAP",
+    "genre": "FLIGHT",
+    "description": "Tap to fly. Thread the pipes.",
+    "accent": "#f6d560"
+  },
+  {
+    "id": "pacman",
+    "title": "DGIT_PAC",
+    "genre": "MAZE CHASE",
+    "description": "Clear the maze. Stay ahead of the ghosts.",
+    "accent": "#ffe34f",
+    "aspectRatio": "4 / 5"
   }
 ]

@@ -17,7 +17,7 @@
           <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
           <span class="brand-name">DGITS<span>ADMIN</span></span>
         </a>
-        <div class="topbar-meta"><span class="online-dot"></span> LOCAL ADMIN <span class="meta-divider">/</span> SCORE MODERATION</div>
+        <div class="topbar-meta"><span class="online-dot"></span> LOCAL ADMIN <span class="meta-divider">/</span> SCORE MODERATION <span class="admin-clock"><span>LOCAL TIME</span><time id="live-clock">--:--:--</time></span></div>
         <a class="admin-back" href="http://localhost:3000/">BACK TO ARCADE</a>
       </header>
 
@@ -31,14 +31,36 @@
           <button class="admin-refresh" id="refresh-button" type="button" title="Refresh score entries">↻ <span>Refresh</span></button>
         </section>
 
+        <section class="admin-sessions" aria-labelledby="sessions-title">
+          <div class="admin-section-heading">
+            <div>
+              <span class="section-label">ACCESS CONTROL</span>
+              <h2 id="sessions-title">Client sessions</h2>
+              <p>Register a LAN IP or add time to its current session.</p>
+            </div>
+          </div>
+          <form class="session-form" id="session-form">
+            <label for="session-ip">CLIENT IP<input id="session-ip" name="ip" type="text" inputmode="decimal" autocomplete="off" placeholder="192.168.1.34" required></label>
+            <label for="session-minutes">MINUTES TO ADD<input id="session-minutes" name="minutes" type="number" min="1" max="10080" value="60" required></label>
+            <button type="submit" id="grant-session-button">REGISTER / ADD TIME</button>
+          </form>
+          <div class="session-status" id="session-status" role="status" aria-live="polite">Loading client sessions...</div>
+          <div class="admin-table-wrap">
+            <table>
+              <thead><tr><th scope="col">CLIENT IP</th><th scope="col">TIME LEFT</th><th scope="col">LAST SEEN</th><th scope="col">EXPIRES</th><th scope="col">STATUS</th><th scope="col"><span class="visually-hidden">Action</span></th></tr></thead>
+              <tbody id="session-rows"><tr><td class="admin-empty" colspan="6">Loading client sessions...</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+
         <div class="admin-status" id="admin-status" role="status" aria-live="polite">Loading score entries...</div>
         <div class="admin-table-wrap">
           <table>
             <thead>
-              <tr><th scope="col">DATE</th><th scope="col">GAME</th><th scope="col">PLAYER</th><th scope="col">SCORE</th><th scope="col"><span class="visually-hidden">Action</span></th></tr>
+              <tr><th scope="col">DATE</th><th scope="col">TIME SUBMITTED</th><th scope="col">GAME</th><th scope="col">PLAYER</th><th scope="col">SCORE</th><th scope="col"><span class="visually-hidden">Action</span></th></tr>
             </thead>
             <tbody id="score-rows">
-              <tr><td class="admin-empty" colspan="5">Loading score entries...</td></tr>
+              <tr><td class="admin-empty" colspan="6">Loading score entries...</td></tr>
             </tbody>
           </table>
         </div>

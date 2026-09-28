@@ -12,17 +12,34 @@
     <div class="arcade-shell">
       <header class="topbar">
         <a class="brand" href="/" aria-label="DGITS Arcade home">
-          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <span class="brand-name">DGITS<span>ARCADE</span></span>
+          <img class="brand-logo" src="/dgits-logo.jpg" alt="DGITS logo">
+          <span class="brand-copy"><strong class="brand-title">DGITS Arcade</strong><span class="brand-credit">Brought to you by DGITS Programming Department</span></span>
         </a>
         <div class="topbar-meta"><span class="online-dot"></span> LOCAL ARCADE <span class="meta-divider">/</span> OPEN PLAY</div>
-        <div class="player-badge"><span class="player-icon">P</span><span>PLAYER&nbsp; ONE</span></div>
+        <div class="client-session" id="client-session" hidden><span>SESSION</span><time id="session-countdown">--:--</time></div>
       </header>
 
       <div class="layout">
         <aside class="sidebar" aria-label="Game library">
-          <div class="sidebar-heading"><span>THE FLOOR</span><span class="game-count" id="game-count">--</span></div>
+          <div class="sidebar-heading"><span>GAMES</span><span class="game-count" id="game-count">--</span></div>
           <div class="game-list" id="game-list" role="list"></div>
+          <button class="rewards-button" id="rewards-button" type="button" aria-expanded="false" aria-controls="rewards-message">REWARDS INFORMATION <span aria-hidden="true">+</span></button>
+          <div class="rewards-message" id="rewards-message" hidden>
+            <p>The following games have rewards of their own after DFIRST:</p>
+            <ul>
+              <li>DGIT_TAP</li>
+              <li>DGIT_TYPE</li>
+              <li>DGIT_FLAP</li>
+              <li>DGIT_PAC</li>
+            </ul>
+            <p>Rewards include, but are not limited to:</p>
+            <ul>
+              <li>A special blog post on the DGITS Facebook page for the top 10 players.</li>
+              <li>A custom-made pin from DGITS.</li>
+              <li>A special offer to join the programming department.</li>
+            </ul>
+            <p class="rewards-signoff">Sincerely,<br>Kuya Sean<br>Programming Head Officer<br>DGITS | D-Primes</p>
+          </div>
           <div class="sidebar-bottom"><span class="status-led"></span> SCORE SYSTEM ONLINE</div>
         </aside>
 
@@ -36,6 +53,14 @@
               </div>
               <div class="game-frame-wrap" id="frame-wrap">
                 <iframe id="game-frame" title="Arcade game" allow="fullscreen" referrerpolicy="same-origin"></iframe>
+                <section class="session-ended" id="session-ended" hidden aria-labelledby="session-ended-title">
+                  <div>
+                    <span class="section-label">ARCADE ACCESS</span>
+                    <h2 id="session-ended-title">Session unavailable</h2>
+                    <p id="session-ended-message">Ask the arcade admin to register this device.</p>
+                    <button id="session-recheck" type="button">CHECK SESSION</button>
+                  </div>
+                </section>
                 <div class="frame-vignette" aria-hidden="true"></div>
               </div>
               <div class="game-footer">
@@ -53,7 +78,7 @@
               <div class="your-score" id="score-notice" aria-live="polite"><span class="score-notice-icon">+</span><span>Play a round. Your score will appear here.</span></div>
             </aside>
           </div>
-          <footer class="page-footer"><span>DGITS ARCADE</span><span>THREE GAMES. ONE MORE ROUND.</span><span>EST. 2026</span></footer>
+          <footer class="page-footer"><span>DGITS ARCADE</span><span>EST. 2026</span></footer>
         </main>
       </div>
     </div>

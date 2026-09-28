@@ -96,3 +96,15 @@ canvas {
   font: 8px monospace;
   letter-spacing: .08em;
 }
+
+.play-again {
+  min-height: 36px;
+  margin-top: 10px;
+  padding: 0 12px;
+  border: 1px solid #536357;
+  border-radius: 2px;
+  color: #eff4ed;
+  background: #29312e;
+  font: 9px monospace;
+  cursor: pointer;
+}
