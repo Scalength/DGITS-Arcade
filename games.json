@@ -1,0 +1,16 @@
+[
+  {
+    "id": "quick-tap",
+    "title": "Quick Tap",
+    "genre": "CLICKER",
+    "description": "Stack points, one hit at a time.",
+    "accent": "#c9ff61"
+  },
+  {
+    "id": "typer",
+    "title": "Typer",
+    "genre": "WORD DEFENSE",
+    "description": "Type fast. Keep the center alive.",
+    "accent": "#75d6ff"
+  }
+]

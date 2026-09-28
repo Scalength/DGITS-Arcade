@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#171a16">
+    <title>Admin | DGITS Arcade</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/admin/admin.css">
+    <script src="/admin/admin.js" defer></script>
+  </head>
+  <body>
+    <div class="arcade-shell">
+      <header class="topbar">
+        <a class="brand" href="http://localhost:3000/" aria-label="DGITS Arcade home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="brand-name">DGITS<span>ADMIN</span></span>
+        </a>
+        <div class="topbar-meta"><span class="online-dot"></span> LOCAL ADMIN <span class="meta-divider">/</span> SCORE MODERATION</div>
+        <a class="admin-back" href="http://localhost:3000/">BACK TO ARCADE</a>
+      </header>
+
+      <main class="admin-main">
+        <section class="admin-heading" aria-labelledby="admin-title">
+          <div>
+            <span class="section-label">ARCADE DATABASE</span>
+            <h1 id="admin-title">Score entries</h1>
+            <p>Review recent leaderboard submissions and remove unwanted entries.</p>
+          </div>
+          <button class="admin-refresh" id="refresh-button" type="button" title="Refresh score entries">↻ <span>Refresh</span></button>
+        </section>
+
+        <div class="admin-status" id="admin-status" role="status" aria-live="polite">Loading score entries...</div>
+        <div class="admin-table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">DATE</th><th scope="col">GAME</th><th scope="col">PLAYER</th><th scope="col">SCORE</th><th scope="col"><span class="visually-hidden">Action</span></th></tr>
+            </thead>
+            <tbody id="score-rows">
+              <tr><td class="admin-empty" colspan="5">Loading score entries...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="admin-footer"><span>LOCALHOST ONLY</span><span>SHOWING THE MOST RECENT 500 ENTRIES</span></footer>
+      </main>
+    </div>
+  </body>
+</html>

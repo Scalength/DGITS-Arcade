@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { --accent: #c9ff61; display: grid; min-width: 280px; min-height: 100vh; margin: 0; place-items: center; overflow: hidden; color: #f4f4e9; background: radial-gradient(ellipse at 50% 44%, color-mix(in srgb, var(--accent) 13%, #151813), #151813 70%); font-family: 'Trebuchet MS', sans-serif; }
+body[data-accent="#70e4d1"] { --accent: #70e4d1; }
+body[data-accent="#ff9078"] { --accent: #ff9078; }
+.game { display: grid; width: min(410px, calc(100vw - 36px)); justify-items: center; text-align: center; }
+.game-mark { color: var(--accent); font: 10px 'Courier New', monospace; letter-spacing: .14em; }
+h1 { margin: 11px 0 0; font-size: clamp(29px, 6vw, 46px); font-weight: 700; letter-spacing: 0; }
+p { margin: 8px 0 23px; color: #9ea597; font-size: 12px; }
+.tap-target { display: grid; width: 142px; aspect-ratio: 1; align-content: center; justify-items: center; gap: 4px; border: 1px solid color-mix(in srgb, var(--accent) 70%, #444); border-radius: 50%; color: #151813; background: var(--accent); box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent) 8%, transparent), 0 0 48px color-mix(in srgb, var(--accent) 25%, transparent); cursor: pointer; transition: transform .12s ease, box-shadow .12s ease; }
+.tap-target:hover { transform: scale(1.035); box-shadow: 0 0 0 12px color-mix(in srgb, var(--accent) 10%, transparent), 0 0 56px color-mix(in srgb, var(--accent) 31%, transparent); }
+.tap-target:active { transform: scale(.96); }
+.tap-number { font: 500 39px 'Courier New', monospace; }
+.tap-copy { font: 9px 'Courier New', monospace; letter-spacing: .1em; }
+form { display: flex; width: 100%; gap: 7px; margin-top: 25px; }
+input, form button { min-height: 39px; border: 1px solid #3a4036; border-radius: 2px; color: #e9ebdf; background: #1d211c; font: 9px 'Courier New', monospace; }
+input { width: 0; flex: 1; padding: 0 11px; }
+input::placeholder { color: #858c7f; }
+form button { padding: 0 12px; color: #151813; border-color: var(--accent); background: var(--accent); cursor: pointer; letter-spacing: .03em; }
+form button span { padding-left: 5px; }
+.game-status { min-height: 14px; margin-top: 12px; color: #99a18e; font: 8px 'Courier New', monospace; letter-spacing: .08em; }

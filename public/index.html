@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#171a16">
+    <title>DGITS Arcade</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="arcade-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="DGITS Arcade home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="brand-name">DGITS<span>ARCADE</span></span>
+        </a>
+        <div class="topbar-meta"><span class="online-dot"></span> LOCAL ARCADE <span class="meta-divider">/</span> OPEN PLAY</div>
+        <div class="player-badge"><span class="player-icon">P</span><span>PLAYER&nbsp; ONE</span></div>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Game library">
+          <div class="sidebar-heading"><span>THE FLOOR</span><span class="game-count" id="game-count">--</span></div>
+          <div class="game-list" id="game-list" role="list"></div>
+          <div class="sidebar-bottom"><span class="status-led"></span> SCORE SYSTEM ONLINE</div>
+        </aside>
+
+        <main class="main-content">
+          <div class="section-kicker"><span>NOW PLAYING</span><span class="kicker-rule"></span><span id="game-genre">ARCADE</span></div>
+          <div class="workspace">
+            <section class="game-section" aria-label="Selected game">
+              <div class="game-heading">
+                <div><h1 id="game-title">Loading arcade</h1><p id="game-description">Pick a game and make your mark.</p></div>
+                <span class="live-pill"><i></i> LIVE</span>
+              </div>
+              <div class="game-frame-wrap" id="frame-wrap">
+                <iframe id="game-frame" title="Arcade game" allow="fullscreen" referrerpolicy="same-origin"></iframe>
+                <div class="frame-vignette" aria-hidden="true"></div>
+              </div>
+              <div class="game-footer">
+                <span><span class="key-icon">ENTER</span> PLAY IN FRAME</span>
+                <span class="game-id-label" id="game-id-label"></span>
+                <button class="icon-button" id="fullscreen-button" type="button" aria-label="Toggle fullscreen" title="Toggle fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4H4v4M16 4h4v4M20 16v4h-4M4 16v4h4M4 8l6-6M20 8l-6-6M20 16l-6 6M4 16l6 6"/></svg></button>
+              </div>
+            </section>
+
+            <aside class="leaderboard" aria-label="Leaderboard">
+              <div class="leaderboard-head"><div><span class="section-label">THE BOARD</span><h2>Top scores</h2></div><span class="refresh-mark" id="refresh-mark" aria-label="Updating live">↻</span></div>
+              <div class="board-caption"><span>RANK / PLAYER</span><span>PTS</span></div>
+              <ol class="score-list" id="score-list" aria-live="polite"><li class="empty-board">Loading scores...</li></ol>
+              <div class="board-footer"><span class="status-led"></span><span id="board-updated">SYNCING SCORES</span></div>
+              <div class="your-score" id="score-notice" aria-live="polite"><span class="score-notice-icon">+</span><span>Play a round. Your score will appear here.</span></div>
+            </aside>
+          </div>
+          <footer class="page-footer"><span>DGITS ARCADE</span><span>THREE GAMES. ONE MORE ROUND.</span><span>EST. 2026</span></footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
